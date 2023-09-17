@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Calculated Measurements</title>
+        <style>
+            * {
+                font-family:Arial, Helvetica, sans-serif;
+            }
+
+            html {
+                font-size:100%;
+            }
+
+            body {
+                display:flex;
+            }
+
+            h1 {
+                font-size:13vh;
+                margin-bottom:0;
+            }
+
+            h3 {
+                font-size:5vh;
+                text-align:center;
+            }
+
+            main {
+                margin:auto;
+                width:60%;
+            }
+
+            hr {
+                margin:2vh;
+            }
+
+            section {
+                height:clamp(10vh,calc(10vh + 20vh),20vh);
+                background-color:yellow;
+                color:black;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+            }
+
+            pre {
+                font-family:monospace;
+            }
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Calculated Measurements</h1>
+            <p>These are measurements that are products of mathematical operations.</p>
+            <hr align="center" width="50%">
+            <article>
+                <h3>clamp()</h3>
+                <p>The browser evaluates first the expression in the clamp function. If it's between the provided min and max values, the expression will be used.</p>
+                <p>If the resulting value is either too high or too low, the browser will use the max or min values respectively.</p>
+                <section>
+                    <pre>
+                        The expression used for my height is 10vh + 20vh.
+                        The minimum value is 10vh.
+                        The maximum value is 20vh.
+                        How long do you I am?
+                    </pre>
+                </section>
+            </article>
+        </main>
+    </body>
+
+</html>
