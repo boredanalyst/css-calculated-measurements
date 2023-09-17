@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Calculated Measurements</title>
+        <style>
+            * {
+                font-family:Arial, Helvetica, sans-serif;
+            }
+
+            html {
+                font-size:100%;
+            }
+
+            body {
+                display:flex;
+            }
+
+            h1 {
+                font-size:13vh;
+                margin-bottom:0;
+            }
+
+            h3 {
+                font-size:5vh;
+                text-align:center;
+            }
+
+            main {
+                margin:auto;
+                width:60%;
+            }
+
+            hr {
+                margin:2vh;
+            }
+
+            section {
+                height:max(60vh, 20vh, 30vh);
+                background-color:yellow;
+                color:black;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Calculated Measurements</h1>
+            <p>These are measurements that are products of mathematical operations.</p>
+            <hr align="center" width="50%">
+            <article>
+                <h3>max()</h3>
+                <p>This sets the resulting measurement to be the largest out of a list of values provided.</p>
+                <section>
+                    The choices provided are 60vh, 20vh, and 30vh.
+                    I am therefore 60vh long because it is the largest value out of the list.
+                </section>
+            </article>
+        </main>
+    </body>
+
+</html>
